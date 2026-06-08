@@ -5,6 +5,7 @@ use App\Http\Controllers\DosenController ;
 use App\Http\Controllers\PegawaiController ;
 use App\Http\Controllers\BlogController ;
 use App\Http\Controllers\PegawaiDBController ;
+use App\Http\Controllers\NilaiKuliahController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -46,6 +47,14 @@ Route::get('/pegawaiedit/{id}', [PegawaiDBController::class, 'edit']);
 Route::post('/pegawaiupdate', [PegawaiDBController::class, 'update']);
 Route::get('/pegawaihapus/{id}', [PegawaiDBController::class, 'hapus']);
 Route::get('/pegawaicari', [PegawaiDBController::class, 'cari']);
+
+//CRUD Latihan EAS
+// 1. Menampilkan Halaman Index
+Route::get('/nilaikuliah', [NilaiKuliahController::class, 'index']);
+// 2. Menampilkan Form Tambah Data
+Route::get('/nilaikuliahtambah', [NilaiKuliahController::class, 'tambah']);
+// Tambah Data
+Route::post('/nilaikuliahsimpan', [NilaiKuliahController::class, 'simpan']);
 
 
 Route::get('/pert1', function () {
