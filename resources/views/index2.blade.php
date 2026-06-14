@@ -1,4 +1,4 @@
-@extends('template2')
+@extends('templatefix')
 
 @section('title', 'Data Nilai Kuliah')
 
@@ -7,7 +7,7 @@
 
         <br />
         <br />
-        <h2>Latihan EAS PWEB - Nilai Kuliah</h2>
+        <h2>Nilai Kuliah</h2>
         <br />
 
         <table class="table table-striped table-hover">
@@ -32,7 +32,6 @@
                         $nilaiHuruf = 'A';
                     }
 
-                    // Logika Perhitungan Bobot
                     $bobot = $data->NilaiAngka * $data->SKS;
                 @endphp
 

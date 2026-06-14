@@ -1,5 +1,5 @@
 <!-- Menghubungkan dengan view template master -->
-@extends('template1')
+@extends('templatefix')
 
 @section('title', 'Tambah Pegawai')
 <!-- isi bagian konten -->

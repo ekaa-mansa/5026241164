@@ -1,6 +1,6 @@
 @extends('templatefix')
 
-@section('title', 'Tambah Data Nilai Kuliah')
+@section('title', 'Beli Barang')
 
 @section('konten')
     <center>
@@ -10,38 +10,37 @@
 
         <div class="card" style="width: 60%; text-align: left;">
             <div class="card-header">
-                Form Tambah Data Nilai Kuliah
+                Form Pembelian Barang
             </div>
 
             <div class="card-body">
-                <form action="/nilaikuliahsimpan" method="post">
+                <form action="/keranjangbelanjasimpan" method="post">
                     @csrf
 
                     <div class="row mb-3">
-                        <label for="NRP" class="col-sm-3 col-form-label">NRP (Max 6)</label>
+                        <label for="KodeBarang" class="col-sm-3 col-form-label">Kode Barang</label>
                         <div class="col-sm-9">
-                            <input type="text" name="NRP" id="NRP" class="form-control" maxlength="6"
-                                required>
+                            <input type="number" name="KodeBarang" id="KodeBarang" class="form-control" required>
                         </div>
                     </div>
 
                     <div class="row mb-3">
-                        <label for="NilaiAngka" class="col-sm-3 col-form-label">Nilai Angka</label>
+                        <label for="Jumlah" class="col-sm-3 col-form-label">Jumlah Pembelian</label>
                         <div class="col-sm-9">
-                            <input type="number" name="NilaiAngka" id="NilaiAngka" class="form-control" required>
+                            <input type="number" name="Jumlah" id="Jumlah" class="form-control" required>
                         </div>
                     </div>
 
                     <div class="row mb-3">
-                        <label for="SKS" class="col-sm-3 col-form-label">SKS</label>
+                        <label for="Harga" class="col-sm-3 col-form-label">Harga per item</label>
                         <div class="col-sm-9">
-                            <input type="number" name="SKS" id="SKS" class="form-control" required>
+                            <input type="number" name="Harga" id="Harga" class="form-control" required>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="offset-sm-3 col-sm-9">
-                            <input type="submit" value="Simpan Data" class="btn btn-primary">
+                            <input type="submit" value="Simpan" class="btn btn-primary">
                         </div>
                     </div>
 
@@ -51,6 +50,6 @@
 
         <br />
         <br />
-        <a href="/nilaikuliah" class="btn btn-info" style="color: white;">Kembali</a>
+        <a href="/keranjangbelanja" class="btn btn-info" style="color: white;">Kembali</a>
     </center>
 @endsection

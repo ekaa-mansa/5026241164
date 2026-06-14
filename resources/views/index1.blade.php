@@ -1,5 +1,5 @@
 <!-- Menghubungkan dengan view template master -->
-@extends('template1')
+@extends('templatefix')
 
 @section('title', 'Data Pegawai')
 
@@ -42,5 +42,7 @@
             {{ $pegawai->links() }}
         </ul>
         <a href="/pegawaitambah" class="btn btn-primary">Tambah Pegawai Baru</a>
+        <br />
+        <br />
     </center>
 @endsection
